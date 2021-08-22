@@ -23,7 +23,14 @@ endif
 :set wildmode=longest:list,full
 " Set the syntax highlighting on 
 syntax on
-:colo desert
+" Try to add minimalist colorscheme (from
+" https://github.com/flazz/vim-colorschemes.git)
+" If you can't find it, use desert default theme
+try
+    colorscheme minimalist 
+catch /^Vim\%((\a\+)\)\=:E185/
+    colorscheme desert 
+endtry
 
 " Set indent controls
 :set autoindent
