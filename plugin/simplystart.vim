@@ -1,7 +1,7 @@
 " Welcome to grossremark's vim config file
 " Where I have no idea what I'm doing
 " Maintainer: M Gross <https://grossremarks.com>
-" Version: 0.1.0
+" Version: 0.1.1
 if has('autocmd')
     filetype plugin indent on
 endif
