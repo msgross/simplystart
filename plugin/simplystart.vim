@@ -2,6 +2,18 @@
 " Where I have no idea what I'm doing
 " Maintainer: M Gross <https://grossremarks.com>
 " Version: 0.1.1
+
+if exists('g:simplystart_loaded')
+    finish
+endif
+
+" It's a bit hacky, but one of my tests is simply to validate whether the plugin
+" loads without issue. I think there are probably much easier ways to validate
+" an error, but might as well have it set up for if I need to expand later 
+if exists('g:test_mode') && g:test_mode == 1
+    let g:test_mode = 0
+    finish
+endif
 if has('autocmd')
     filetype plugin indent on
 endif
@@ -51,3 +63,5 @@ nmap <silent> <C-L> <C-L>:nohlsearch<CR>:match<CR>:diffupdate<CR>
 :set title
 " Disable swap files
 :set noswapfile
+
+let g:simplystart_loaded = 1
