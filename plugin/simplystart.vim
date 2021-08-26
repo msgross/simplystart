@@ -46,7 +46,10 @@ syntax on
 :set softtabstop=4
 
 " Set test width to standard 80 characters
-:set textwidth=80
+:set textwidth=0
+:set nowrap
+" Set a line column
+:set colorcolumn=81
 " Set backspace behavior
 :set backspace=indent,eol,start
 " Set undo levels 
