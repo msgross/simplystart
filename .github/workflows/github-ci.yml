@@ -20,7 +20,7 @@ jobs:
                 cd ${{github.workspace}}
                 ls
                 cd test
-                vim -Nu vimrc +PlugInstall
+                vim -Nu vimrc +'PlugInstall --sync' +qall &> /dev/null
             - run: echo "Running vader test suite"
             - run: |
                 cd vader \
