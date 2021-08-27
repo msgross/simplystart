@@ -14,7 +14,7 @@ jobs:
             - run: echo "Installing vim-plug"
             - run: |
                 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-              https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
+                https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
             - run: echo "Installing vader test and plugins"
             - run: |
                 cd simplystart/test \
