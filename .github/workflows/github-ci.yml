@@ -26,6 +26,9 @@ jobs:
                 ls
                 cd ${{github.workspace}}
                 ls
-                cd test/vader
+                cd test
+                ls
+                cd vader
+                ls ~/.vim
                 eval "vim '+Vader!*'"
 
