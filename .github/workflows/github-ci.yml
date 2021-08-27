@@ -23,6 +23,9 @@ jobs:
                 vim -Nu vimrc +'PlugInstall --sync' +qall &> /dev/null
             - run: echo "Running vader test suite"
             - run: |
-                cd vader 
+                ls
+                cd ${{github.workspace}}
+                ls
+                cd test/vader
                 eval "vim '+Vader!*'"
 
