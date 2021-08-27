@@ -34,7 +34,7 @@ endif
 :set wildmenu
 :set wildmode=longest:list,full
 " Set the syntax highlighting on 
-syntax on
+ytax on
 
 " Set indent controls
 :set autoindent
