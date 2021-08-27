@@ -9,6 +9,7 @@ jobs:
               uses: actions/checkout@v2
             - run: echo "Removing minimal-vim"
             - run: |
+                sudo apt-get update \
                 sudo apt -y remove vim-tiny \
                 sudo apt-get install vim 
             - run: echo "Installing vim-plug"
