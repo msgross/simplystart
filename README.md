@@ -1,5 +1,6 @@
 ---
-# SimplyStart     [![vimrc-validation](https://github.com/msgross/simplystart/actions/workflows/github-ci.yml/badge.svg)](https://github.com/msgross/simplystart/actions/workflows/github-ci.yml)
+# SimplyStart     
+[![vimrc-validation](https://github.com/msgross/simplystart/actions/workflows/github-ci.yml/badge.svg)](https://github.com/msgross/simplystart/actions/workflows/github-ci.yml)
 A _vim_ module with some basic settings, will probably change as my needs change      
 ## Why?
 None whatsoever, honestly, if you want a quick start, go with
