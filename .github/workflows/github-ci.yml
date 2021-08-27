@@ -4,31 +4,21 @@ jobs:
     test:
         runs-on: ubuntu-latest
         steps:
-            - run: echo "Setting up test environment"
-            - name: Enable Test Environment
+            - name: Run Primary Test Suite 
               uses: actions/checkout@v2
-            - run: echo "Removing minimal-vim"
             - run: |
                 sudo apt-get update 
                 sudo apt -y remove vim-tiny 
                 sudo apt-get install vim 
-            - run: echo "Installing vim-plug"
             - run: |
                 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
-            - run: echo "Installing vader test and plugins"
             - run: |
                 cd ${{github.workspace}}
-                ls
                 cd test
                 vim -Nu vimrc +'PlugInstall --sync' +qall &> /dev/null
-            - run: echo "Running vader test suite"
             - run: |
-                ls
                 cd ${{github.workspace}}
-                ls
                 cd test
-                ls
                 cd vader
-                ls ~/.vim
                 eval "vim -Nu ../vimrc '+Vader!*'"
 
