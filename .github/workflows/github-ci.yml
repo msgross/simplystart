@@ -1,0 +1,26 @@
+name: vimrc-validation
+on: [push]
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Setting up test environment"
+            - name: Enable Test Environment
+              uses: actions/checkout@v2
+            - run: echo "Removing minimal-vim"
+            - run: |
+                sudo apt -y remove vim-tiny \
+                sudo apt-get install vim 
+            - run: echo "Installing vim-plug"
+            - run: |
+                curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+              https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
+            - run: echo "Installing vader test and plugins"
+            - run: |
+                cd simplystart/test \
+                vim -Nu vimrc +PlugInstall
+            - run: echo "Running vader test suite"
+            - run: |
+                cd vader \
+                eval "vim '+Vader!*'"
+

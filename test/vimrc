@@ -1,0 +1,4 @@
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/vader.vim'
+Plug 'msgross/simplystart'
+call plug#end()
