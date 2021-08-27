@@ -1,5 +1,5 @@
 ---
-# SimplyStart     
+# SimplyStart [![vimrc-validation](https://github.com/msgross/simplystart/actions/workflows/github-ci.yml/badge.svg)](https://github.com/msgross/simplystart/actions/workflows/github-ci.yml)
 A _vim_ module with some basic settings, will probably change as my needs change      
 ## Why?
 None whatsoever, honestly, if you want a quick start, go with
@@ -29,8 +29,8 @@ with spaces
 :set softtabstop=4
 ```
 ### Set some search controls
-Set controls so that it highlights searches but Ctrl-L clears the highlighting. Search is
-incremental so it fills as it is found. Search will ignore case. 
+Set controls so that it highlights searches but Ctrl-L clears the highlighting. 
+Search is incremental so it fills as it is found. Search will ignore case. 
 ```
 :set hlsearch
 :set incsearch
@@ -52,12 +52,17 @@ by having it, it just leaks into my git repos when I'm not paying attention
 :set noswapfile
 ```
 ## Installation      
+Installation is pretty simple, you can use vim's built-in package manager or try
+some of the various others. I've only tested with the built-in package manager
+and [vim-plug](https://github.com/junegunn/vim-plug)
+### Standard
 1) `cd ~/.vim`
 2) `mkdir -p pack/plugins/start`
 3) `git clone git@github.com:msgross/simplystart.git
 ~/.vim/pack/plugins/start/simplystart`      
-Note: A vim package manager can probably handle this as well, but I haven't
-personally tried that out 
+### Vim-plug
+1) Add `Plug 'msgross/simplystart'` to .vimrc
+2) Run `:PlugInstall`
 ## Dependencies
 flazz maintains a pretty large repository of theme options, we personally use
 minimalist as our default if it's available, desert (which comes with vim by
