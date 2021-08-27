@@ -23,6 +23,6 @@ jobs:
                 vim -Nu vimrc +'PlugInstall --sync' +qall &> /dev/null
             - run: echo "Running vader test suite"
             - run: |
-                cd vader \
+                cd vader 
                 eval "vim '+Vader!*'"
 
