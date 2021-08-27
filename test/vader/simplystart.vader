@@ -16,7 +16,7 @@ Expect (Hello, world):
 Execute (Test exceptions):
   call mkdir($HOME . "/.vim/pack/plugins/opt/simplystart_test/plugin", "p", 0700)
   :set shortmess=at
-  :silent !cp ../plugin/simplystart.vim $HOME/.vim/pack/plugins/opt/simplystart_test/plugin/simplystart_test.vim
+  :silent !cp ../../plugin/simplystart.vim $HOME/.vim/pack/plugins/opt/simplystart_test/plugin/simplystart_test.vim
   :silent packadd simplystart_test
   :silent !rm -rf $HOME/.vim/pack/plugins/opt/simplystart_test
   Assert v:exception == ""

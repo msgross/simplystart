@@ -1,3 +1,5 @@
+let g:test_mode=1
+
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vader.vim'
 Plug 'msgross/simplystart'
