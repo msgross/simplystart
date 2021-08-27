@@ -20,4 +20,4 @@ jobs:
                 cd ${{github.workspace}}
                 cd test
                 cd vader
-                eval "vim -c ':let g:test_mode = 1' -Nu ../vimrc '+Vader!*'"
+                eval "vim -Nu ../vimrc '+Vader!*'"
