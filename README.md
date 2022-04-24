@@ -54,14 +54,15 @@ by having it, it just leaks into my git repos when I'm not paying attention
 ```
 ## Installation      
 Installation is pretty simple, you can use vim's built-in package manager or try
-some of the various others. I've only tested with the built-in package manager
-and [vim-plug](https://github.com/junegunn/vim-plug)
+some of the various others. I've only tested with the built-in package manager, [vim-plug](https://github.com/junegunn/vim-plug), 
+and [Vundle](https://github.com/VundleVim/Vundle.vim)
 ### Standard
 1) `cd ~/.vim`
 2) `mkdir -p pack/plugins/start`
 3) `git clone git@github.com:msgross/simplystart.git
 ~/.vim/pack/plugins/start/simplystart`      
 ### Vim-plug
+These steps assume you've already gone through the steps to set up [vim-plug](https://github.com/junegunn/vim-plug)
 1) Add `Plug 'msgross/simplystart'` to .vimrc
 2) Run `:PlugInstall`
 ## Dependencies
